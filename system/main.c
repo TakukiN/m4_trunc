@@ -31,15 +31,77 @@
 ///////////////////////////////////////////////////////////////////////////////
 //  Includes
 ///////////////////////////////////////////////////////////////////////////////
+#include "rpmsg/rpmsg_rtos.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "semphr.h"
 #include "board.h"
+#include "mu_imx.h"
 #include "debug_console_imx.h"
-#include <string.h>
+
+////////////////////////////////////////////////////////////////////////////////
+// Definitions
+////////////////////////////////////////////////////////////////////////////////
+#define APP_TASK_STACK_SIZE 256
+
+/*
+ * APP decided interrupt priority
+ */
+#define APP_MU_IRQ_PRIORITY 3
+
+typedef struct the_message
+{
+   uint32_t  DATA;
+} THE_MESSAGE, * THE_MESSAGE_PTR;
 
 ////////////////////////////////////////////////////////////////////////////////
 // Code
 ////////////////////////////////////////////////////////////////////////////////
+
+void SystemStateTask(void *pvParameters)
+{
+    /* Initial variables */
+    int result;
+    struct remote_device *rdev = NULL;
+    struct rpmsg_channel *app_chnl = NULL;
+    THE_MESSAGE msg = {0};
+    int len;
+
+    /* Print the initial banner */
+    PRINTF("System State Task Start\r\n");
+
+    result = rpmsg_rtos_init(0 /*REMOTE_CPU_ID*/, &rdev, RPMSG_MASTER, &app_chnl);
+    assert(0 == result);
+
+    PRINTF("Name service handshake is done, M4 has setup a rpmsg channel [%d ---> %d]\r\n", app_chnl->src, app_chnl->dst);
+
+    
+    while (true)
+    {
+        /* receive/send data to channel default ept */
+        result = rpmsg_rtos_recv(app_chnl->rp_ept, &msg, &len, sizeof(THE_MESSAGE), NULL, 0xFFFFFFFF);
+        assert(0 == result);
+        
+        //for debug
+        PRINTF("Get Data From Master Side : %d\r\n", msg.DATA);
+        msg.DATA++;
+
+        //ack send
+        result = rpmsg_rtos_send(app_chnl->rp_ept, &msg, sizeof(THE_MESSAGE), app_chnl->dst);
+        assert(0 == result);
+    }
+}
+
+/*
+ * MU Interrrupt ISR
+ */
+void BOARD_MU_HANDLER(void)
+{
+    /*
+     * calls into rpmsg_handler provided by middleware
+     */
+    rpmsg_handler();
+}
 
 /*!
  * @brief A basic user-defined task
@@ -71,10 +133,20 @@ int main(void)
     // Initialize demo application pins setting and clock setting.
     hardware_init();
 
+    /*
+     * Prepare for the MU Interrupt
+     *  MU must be initialized before rpmsg init is called
+     */
+    MU_Init(BOARD_MU_BASE_ADDR);
+    NVIC_SetPriority(BOARD_MU_IRQ_NUM, APP_MU_IRQ_PRIORITY);
+    NVIC_EnableIRQ(BOARD_MU_IRQ_NUM);
+    
     // Create a demo task which will print Hello world and echo user's input.
-    xTaskCreate(HelloTask, "Print Task", configMINIMAL_STACK_SIZE,
-                NULL, tskIDLE_PRIORITY+1, NULL);
+    xTaskCreate(HelloTask, "Print Task", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY+1, NULL);
 
+    /* Create a system state task. */
+    xTaskCreate(SystemStateTask, "System State Task", APP_TASK_STACK_SIZE, NULL, tskIDLE_PRIORITY + 2, NULL);
+    
     // Start FreeRTOS scheduler.
     vTaskStartScheduler();
 
