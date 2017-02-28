@@ -41,6 +41,21 @@ void hardware_init(void)
 
     /* initialize debug uart */
     dbg_uart_init();
+    
+    /* In this example, we need to grasp board GPT exclusively */
+    RDC_SetPdapAccess(RDC, BOARD_GPTB_RDC_PDAP, 3 << (BOARD_DOMAIN_ID * 2), false, false);
+
+    /* Enable PLL PFD0 for GPTB */
+    CCM_ControlGate(CCM, ccmPllGateSys, ccmClockNeededRunWait);
+    CCM_ControlGate(CCM, ccmPllGatePfd0, ccmClockNeededRunWait);
+
+    /* Select GPTB clock derived from PLL PFD0 clock divide 4 (pre=2 post=2) */
+    CCM_UpdateRoot(CCM, BOARD_GPTB_CCM_ROOT, ccmRootmuxGptSysPllPfd0, 1, 1);
+
+    /* Enable clock used by GPTB */
+    CCM_EnableRoot(CCM, BOARD_GPTB_CCM_ROOT);
+    CCM_ControlGate(CCM, BOARD_GPTB_CCM_CCGR, ccmClockNeededRunWait);
+
 }
 
 /*******************************************************************************

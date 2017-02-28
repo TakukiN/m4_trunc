@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V7.70.2.11706/W32 for ARM                27/Feb/2017  23:50:47
+# IAR ELF Linker V7.70.2.11706/W32 for ARM                28/Feb/2017  23:51:41
 # Copyright 2007-2016 IAR Systems AB.
 #
 #    Output file  =  C:\nxp\M4_trunc\system\iar\debug\m4_trunc.out
@@ -87,158 +87,91 @@ initialize by copy { rw, section .textrw };
   .intvec            ro code  0x1fff8000   0x240  startup_MCIMX7D_M4.o [1]
                             - 0x1fff8240   0x240
 
-"P1":                                     0x4c68
-  .text              ro code  0x1fff8240   0x790  tasks.o [1]
-  CODE               ro code  0x1fff89d0    0xb0  portasm.o [1]
-  .text              ro code  0x1fff8a80   0x1c8  port.o [1]
-  .text              ro code  0x1fff8c48    0x9e  list.o [1]
-  .rodata            const    0x1fff8ce6     0x2  heap_2.o [1]
-  .text              ro code  0x1fff8ce8   0x14c  heap_2.o [1]
-  .text              ro code  0x1fff8e34   0x74c  rpmsg_core.o [1]
-  .text              ro code  0x1fff9580   0x226  rpmsg.o [1]
-  .text              ro code  0x1fff97a6     0x2  startup_MCIMX7D_M4.o [1]
-  .text              ro code  0x1fff97a8   0x108  hil.o [1]
-  .text              ro code  0x1fff98b0   0x41c  remote_device.o [1]
-  .text              ro code  0x1fff9ccc   0x464  rpmsg_porting.o [1]
-  .text              ro code  0x1fffa130    0x60  llist.o [1]
-  .text              ro code  0x1fffa190   0x4da  virtqueue.o [1]
-  .text              ro code  0x1fffa66a     0x2  startup_MCIMX7D_M4.o [1]
-  .text              ro code  0x1fffa66c   0x1dc  sh_mem.o [1]
-  .text              ro code  0x1fffa848    0x48  platform_info.o [1]
-  .text              ro code  0x1fffa890   0x24a  platform.o [1]
-  .text              ro code  0x1fffaada     0x2  startup_MCIMX7D_M4.o [1]
-  .text              ro code  0x1fffaadc    0x24  ABIassert.o [6]
-  .text              ro code  0x1fffab00    0x66  ABImemset.o [5]
-  .text              ro code  0x1fffab66     0x2  startup_MCIMX7D_M4.o [1]
-  .text              ro code  0x1fffab68    0x76  ABImemcpy_unaligned.o [5]
-  .text              ro code  0x1fffabde     0x2  startup_MCIMX7D_M4.o [1]
-  .text              ro code  0x1fffabe0    0x6c  strncpy_unaligned.o [5]
-  .text              ro code  0x1fffac4c    0x2c  strncmp.o [3]
-  .text              ro code  0x1fffac78   0x690  queue.o [1]
-  .text              ro code  0x1fffb308    0x84  mu_imx.o [1]
-  .text              ro code  0x1fffb38c     0x6  abort.o [3]
-  .text              ro code  0x1fffb392     0x2  startup_MCIMX7D_M4.o [1]
-  .text              ro code  0x1fffb394    0x14  exit.o [6]
-  .text              ro code  0x1fffb3a8   0x5ee  print_scan.o [1]
-  .text              ro code  0x1fffb998    0x36  strlen.o [5]
-  .text              ro code  0x1fffb9d0   0x2d0  rpmsg_rtos.o [1]
-  .text              ro code  0x1fffbca0    0x66  rpmsg_ext.o [1]
-  .text              ro code  0x1fffbd08   0x234  uart_imx.o [1]
-  .text              ro code  0x1fffbf3c   0x1d8  board.o [1]
-  .text              ro code  0x1fffc114    0xa0  ccm_imx7d.o [1]
-  .text              ro code  0x1fffc1b4    0x40  pin_mux.o [1]
-  .text              ro code  0x1fffc1f4    0x84  clock_freq.o [1]
-  .text              ro code  0x1fffc278   0x18c  debug_console_imx.o [1]
-  .text              ro code  0x1fffc404    0x48  ccm_analog_imx7d.o [1]
-  .text              ro code  0x1fffc44c   0x1a8  main.o [1]
-  .text              ro code  0x1fffc5f4    0x10  hardware_init.o [1]
-  .text              ro code  0x1fffc604   0x180  system_MCIMX7D_M4.o [1]
-  Initializer bytes  const    0x1fffc784   0x16c  <for RW-1>
-  .rodata            const    0x1fffc8f0    0x54  rpmsg_porting.o [1]
-  .rodata            const    0x1fffc944    0x4c  main.o [1]
-  .rodata            const    0x1fffc990    0x4c  platform.o [1]
-  .rodata            const    0x1fffc9dc    0x44  rpmsg_rtos.o [1]
-  .text              ro code  0x1fffca20    0x40  zero_init3.o [5]
-  .rodata            const    0x1fffca60    0x3c  board.o [1]
-  .rodata            const    0x1fffca9c    0x34  ccm_imx7d.o [1]
-  .rodata            const    0x1fffcad0    0x30  mu_imx.o [1]
-  .rodata            const    0x1fffcb00    0x30  uart_imx.o [1]
-  .text              ro code  0x1fffcb30    0x2c  copy_init3.o [5]
-  .rodata            const    0x1fffcb5c    0x28  platform.o [1]
-  .text              ro code  0x1fffcb84    0x28  data_init.o [5]
-  .rodata            const    0x1fffcbac    0x24  main.o [1]
-  .rodata            const    0x1fffcbd0    0x24  platform.o [1]
-  .text              ro code  0x1fffcbf4    0x22  fpinit_M.o [4]
-  .iar.init_table    const    0x1fffcc18    0x24  - Linker created -
-  .rodata            const    0x1fffcc3c    0x20  board.o [1]
-  .rodata            const    0x1fffcc5c    0x20  main.o [1]
-  .rodata            const    0x1fffcc7c    0x20  main.o [1]
-  .rodata            const    0x1fffcc9c    0x20  platform.o [1]
-  .rodata            const    0x1fffccbc    0x1c  platform.o [1]
-  .rodata            const    0x1fffccd8    0x1c  rpmsg_rtos.o [1]
-  .text              ro code  0x1fffccf4    0x1a  cmain.o [5]
-  .text              ro code  0x1fffcd0e     0x4  low_level_init.o [3]
-  .text              ro code  0x1fffcd12     0x4  exit.o [3]
-  .text              ro code  0x1fffcd18     0xa  cexit.o [5]
-  .rodata            const    0x1fffcd24    0x18  debug_console_imx.o [1]
-  .rodata            const    0x1fffcd3c    0x18  mu_imx.o [1]
-  .rodata            const    0x1fffcd54    0x18  mu_imx.o [1]
-  .rodata            const    0x1fffcd6c    0x18  platform.o [1]
-  .rodata            const    0x1fffcd84    0x18  rpmsg_porting.o [1]
-  .rodata            const    0x1fffcd9c    0x18  rpmsg_porting.o [1]
-  .rodata            const    0x1fffcdb4    0x14  main.o [1]
-  .rodata            const    0x1fffcdc8    0x14  main.o [1]
-  .rodata            const    0x1fffcddc    0x14  rpmsg_porting.o [1]
-  .rodata            const    0x1fffcdf0    0x14  rpmsg_porting.o [1]
-  .text              ro code  0x1fffce04    0x14  startup_MCIMX7D_M4.o [1]
-  .rodata            const    0x1fffce18     0xc  ccm_imx7d.o [1]
-  .rodata            const    0x1fffce24     0xc  ccm_imx7d.o [1]
-  .rodata            const    0x1fffce30     0xc  main.o [1]
-  .rodata            const    0x1fffce3c     0xc  main.o [1]
-  .rodata            const    0x1fffce48     0xc  rpmsg_rtos.o [1]
-  .rodata            const    0x1fffce54     0xc  uart_imx.o [1]
-  .text              ro code  0x1fffce60     0xc  cstartup_M.o [5]
-  .rodata            const    0x1fffce6c     0x8  ccm_imx7d.o [1]
-  .rodata            const    0x1fffce74     0x8  rpmsg_core.o [1]
-  .rodata            const    0x1fffce7c     0x8  rpmsg_core.o [1]
-  .rodata            const    0x1fffce84     0x8  rpmsg_rtos.o [1]
-  .rodata            const    0x1fffce8c     0x8  rpmsg_rtos.o [1]
-  .rodata            const    0x1fffce94     0x8  tasks.o [1]
-  .rodata            const    0x1fffce9c     0x4  main.o [1]
-  .rodata            const    0x1fffcea0     0x4  port.o [1]
-  .text              ro code  0x1fffcea4     0x4  startup_MCIMX7D_M4.o [1]
-  .rodata            const    0x1fffcea8     0x0  zero_init3.o [5]
-  .rodata            const    0x1fffcea8     0x0  copy_init3.o [5]
-                            - 0x1fffcea8  0x4c68
+"P1":                                     0x4757
+  .text              ro code  0x1fff8240   0x6e8  rpmsg_core.o [1]
+  .text              ro code  0x1fff8928   0x410  rpmsg_porting.o [1]
+  .text              ro code  0x1fff8d38    0x4c  llist.o [1]
+  .text              ro code  0x1fff8d84    0xbc  hil.o [1]
+  .text              ro code  0x1fff8e40   0x34c  remote_device.o [1]
+  .text              ro code  0x1fff918c   0x350  virtqueue.o [1]
+  .text              ro code  0x1fff94dc   0x1e0  sh_mem.o [1]
+  .text              ro code  0x1fff96bc   0x194  rpmsg.o [1]
+  .text              ro code  0x1fff9850    0x24  ABIassert.o [6]
+  .text              ro code  0x1fff9874     0x6  ABImemclr4.o [5]
+  .text              ro code  0x1fff987a     0x2  startup_MCIMX7D_M4.o [1]
+  .text              ro code  0x1fff987c   0x310  platform.o [1]
+  .text              ro code  0x1fff9b8c   0x16c  heap_2.o [1]
+  .text              ro code  0x1fff9cf8    0x66  ABImemset.o [5]
+  .text              ro code  0x1fff9d5e     0x2  startup_MCIMX7D_M4.o [1]
+  .text              ro code  0x1fff9d60    0x76  ABImemcpy_unaligned.o [5]
+  .text              ro code  0x1fff9dd6     0x2  startup_MCIMX7D_M4.o [1]
+  .text              ro code  0x1fff9dd8    0x6c  strncpy_unaligned.o [5]
+  .text              ro code  0x1fff9e44    0x2c  strncmp.o [3]
+  .text              ro code  0x1fff9e70   0x6e0  queue.o [1]
+  .text              ro code  0x1fffa550   0x6e0  tasks.o [1]
+  .text              ro code  0x1fffac30    0x34  platform_info.o [1]
+  .text              ro code  0x1fffac64     0x6  abort.o [3]
+  .text              ro code  0x1fffac6a     0x2  startup_MCIMX7D_M4.o [1]
+  .text              ro code  0x1fffac6c    0x32  ABImemset48.o [5]
+  .text              ro code  0x1fffac9e     0x2  startup_MCIMX7D_M4.o [1]
+  .text              ro code  0x1fffaca0    0xcc  mu_imx.o [1]
+  .text              ro code  0x1fffad6c   0x1d8  port.o [1]
+  .text              ro code  0x1fffaf44    0xb4  list.o [1]
+  CODE               ro code  0x1fffaff8    0xb0  portasm.o [1]
+  .text              ro code  0x1fffb0a8    0x14  exit.o [6]
+  .text              ro code  0x1fffb0bc   0x4ac  print_scan.o [1]
+  .text              ro code  0x1fffb568    0x36  strlen.o [5]
+  .text              ro code  0x1fffb59e     0x2  startup_MCIMX7D_M4.o [1]
+  .text              ro code  0x1fffb5a0   0x31c  main.o [1]
+  .text              ro code  0x1fffb8bc   0x174  debug_console_imx.o [1]
+  .text              ro code  0x1fffba30   0x2ac  rpmsg_rtos.o [1]
+  .text              ro code  0x1fffbcdc   0x10c  gpt.o [1]
+  .text              ro code  0x1fffbde8    0xe8  clock_freq.o [1]
+  .text              ro code  0x1fffbed0    0x58  hardware_init.o [1]
+  .text              ro code  0x1fffbf28   0x224  uart_imx.o [1]
+  .text              ro code  0x1fffc14c    0x4e  rpmsg_ext.o [1]
+  .text              ro code  0x1fffc19c    0xe4  ccm_imx7d.o [1]
+  .text              ro code  0x1fffc280    0xf4  ccm_analog_imx7d.o [1]
+  .text              ro code  0x1fffc374    0xe0  board.o [1]
+  .text              ro code  0x1fffc454    0x2c  pin_mux.o [1]
+  .text              ro code  0x1fffc480   0x110  system_MCIMX7D_M4.o [1]
+  .text              ro code  0x1fffc590    0xce  packbits_init.o [5]
+  .text              ro code  0x1fffc65e    0x40  zero_init3.o [5]
+  .text              ro code  0x1fffc6a0    0x28  data_init.o [5]
+  .text              ro code  0x1fffc6c8    0x22  fpinit_M.o [4]
+  .iar.init_table    const    0x1fffc6ec    0x2c  - Linker created -
+  .text              ro code  0x1fffc718    0x1a  cmain.o [5]
+  .text              ro code  0x1fffc732     0x4  low_level_init.o [3]
+  .text              ro code  0x1fffc736     0x4  exit.o [3]
+  .text              ro code  0x1fffc73c     0xa  cexit.o [5]
+  .text              ro code  0x1fffc748    0x14  startup_MCIMX7D_M4.o [1]
+  .text              ro code  0x1fffc75c     0xc  cstartup_M.o [5]
+  .text              ro code  0x1fffc768     0x4  startup_MCIMX7D_M4.o [1]
+  .rodata            const    0x1fffc76c     0x0  zero_init3.o [5]
+  .rodata            const    0x1fffc76c     0x0  packbits_init.o [5]
+  Initializer bytes  const    0x1fffc76c   0x22b  <for RW-1>
+                            - 0x1fffc997  0x4757
 
-"P2-P3", part 1 of 2:                      0x16c
-  RW                          0x20000000   0x16c  <Block>
-    RW-1                      0x20000000   0x16c  <Init block>
-      .data          inited   0x20000000     0x4  heap_2.o [1]
-      .data          inited   0x20000004    0x1c  platform.o [1]
-      .data          inited   0x20000020   0x120  platform_info.o [1]
-      .data          inited   0x20000140     0x4  port.o [1]
-      .data          inited   0x20000144    0x24  remote_device.o [1]
-      .data          inited   0x20000168     0x4  tasks.o [1]
-                            - 0x2000016c   0x16c
+"P2-P3", part 1 of 2:                     0x526c
+  RW                          0x20000000  0x526c  <Block>
+    RW-1                      0x20000000  0x526c  <Init block>
+      .data          inited   0x20000000  0x5018  heap_2.o [1]
+      .data          inited   0x20005018    0x1c  platform.o [1]
+      .data          inited   0x20005034   0x120  platform_info.o [1]
+      .data          inited   0x20005154     0xc  port.o [1]
+      .data          inited   0x20005160    0x24  remote_device.o [1]
+      .data          inited   0x20005184    0xe8  tasks.o [1]
+                            - 0x2000526c  0x526c
 
-"P2-P3", part 2 of 2:                     0x51c4
-  ZI                          0x2000016c  0x51c4  <Block>
-    .bss             zero     0x2000016c    0x10  debug_console_imx.o [1]
-    .bss             zero     0x2000017c  0x5000  heap_2.o [1]
-    .bss             zero     0x2000517c     0x8  heap_2.o [1]
-    .bss             zero     0x20005184     0x8  heap_2.o [1]
-    .bss             zero     0x2000518c     0x4  heap_2.o [1]
-    .bss             zero     0x20005190     0x4  hil.o [1]
-    .bss             zero     0x20005194     0x8  platform.o [1]
-    .bss             zero     0x2000519c     0x4  platform.o [1]
-    .bss             zero     0x200051a0     0x4  port.o [1]
-    .bss             zero     0x200051a4    0x40  queue.o [1]
-    .bss             zero     0x200051e4     0x4  rpmsg_porting.o [1]
-    .bss             zero     0x200051e8    0x50  rpmsg_porting.o [1]
-    .bss             zero     0x20005238     0x4  rpmsg_rtos.o [1]
-    .bss             zero     0x2000523c     0x4  rpmsg_rtos.o [1]
-    .bss             zero     0x20005240     0x4  rpmsg_rtos.o [1]
-    .bss             zero     0x20005244     0x4  rpmsg_rtos.o [1]
-    .bss             zero     0x20005248     0x4  tasks.o [1]
-    .bss             zero     0x2000524c    0x64  tasks.o [1]
-    .bss             zero     0x200052b0    0x14  tasks.o [1]
-    .bss             zero     0x200052c4    0x14  tasks.o [1]
-    .bss             zero     0x200052d8     0x4  tasks.o [1]
-    .bss             zero     0x200052dc     0x4  tasks.o [1]
-    .bss             zero     0x200052e0    0x14  tasks.o [1]
-    .bss             zero     0x200052f4    0x14  tasks.o [1]
-    .bss             zero     0x20005308     0x4  tasks.o [1]
-    .bss             zero     0x2000530c     0x4  tasks.o [1]
-    .bss             zero     0x20005310     0x4  tasks.o [1]
-    .bss             zero     0x20005314     0x4  tasks.o [1]
-    .bss             zero     0x20005318     0x4  tasks.o [1]
-    .bss             zero     0x2000531c     0x4  tasks.o [1]
-    .bss             zero     0x20005320     0x4  tasks.o [1]
-    .bss             zero     0x20005324     0x4  tasks.o [1]
-    .bss             zero     0x20005328     0x4  tasks.o [1]
-    .bss             zero     0x2000532c     0x1  port.o [1]
-                            - 0x20005330  0x51c4
+"P2-P3", part 2 of 2:                       0xc4
+  ZI                          0x2000526c    0xc4  <Block>
+    .bss             zero     0x2000526c    0x10  debug_console_imx.o [1]
+    .bss             zero     0x2000527c     0x4  hil.o [1]
+    .bss             zero     0x20005280     0xc  platform.o [1]
+    .bss             zero     0x2000528c    0x40  queue.o [1]
+    .bss             zero     0x200052cc    0x54  rpmsg_porting.o [1]
+    .bss             zero     0x20005320    0x10  rpmsg_rtos.o [1]
+                            - 0x20005330    0xc4
 
 "P5":                                      0x400
   CSTACK                      0x20007c00   0x400  <Block>
@@ -253,14 +186,14 @@ initialize by copy { rw, section .textrw };
           Address     Size
           -------     ----
 Zero (__iar_zero_init3)
-    1 destination range, total size 0x51c1:
-          0x2000016c  0x51c1
+    1 destination range, total size 0xc4:
+          0x2000526c    0xc4
 
-Copy (__iar_copy_init3)
-    1 source range, total size 0x16c:
-          0x1fffc784   0x16c
-    1 destination range, total size 0x16c:
-          0x20000000   0x16c
+Copy/packbits (__iar_packbits_init3)
+    1 source range, total size 0x22b (2% of destination):
+          0x1fffc76c   0x22b
+    1 destination range, total size 0x526c:
+          0x20000000  0x526c
 
 
 
@@ -271,39 +204,40 @@ Copy (__iar_copy_init3)
     Module                 ro code  ro data  rw data
     ------                 -------  -------  -------
 C:\nxp\M4_trunc\system\iar\debug\obj: [1]
-    board.o                    472       92
-    ccm_analog_imx7d.o          72
-    ccm_imx7d.o                160       84
-    clock_freq.o               132
-    debug_console_imx.o        396       24       16
-    hardware_init.o             16
-    heap_2.o                   332        6   20 504
-    hil.o                      264                 4
-    list.o                     158
-    llist.o                     96
-    main.o                     424      244
-    mu_imx.o                   132       96
-    pin_mux.o                   64
-    platform.o                 586      264       40
-    platform_info.o             72      288      288
-    port.o                     456        8        9
+    board.o                    224
+    ccm_analog_imx7d.o         244
+    ccm_imx7d.o                228
+    clock_freq.o               232
+    debug_console_imx.o        372                16
+    gpt.o                      268
+    hardware_init.o             88
+    heap_2.o                   364      539   20 504
+    hil.o                      188                 4
+    list.o                     180
+    llist.o                     76
+    main.o                     796
+    mu_imx.o                   204
+    pin_mux.o                   44
+    platform.o                 784        1       40
+    platform_info.o             52        7      288
+    port.o                     472                12
     portasm.o                  176
-    print_scan.o             1 518
-    queue.o                  1 680                64
-    remote_device.o          1 052       36       36
-    rpmsg.o                    550
-    rpmsg_core.o             1 868       16
-    rpmsg_ext.o                102
-    rpmsg_porting.o          1 124      172       84
-    rpmsg_rtos.o               720      124       16
-    sh_mem.o                   476
+    print_scan.o             1 196
+    queue.o                  1 760                64
+    remote_device.o            844        1       36
+    rpmsg.o                    404
+    rpmsg_core.o             1 768
+    rpmsg_ext.o                 78
+    rpmsg_porting.o          1 040                84
+    rpmsg_rtos.o               684                16
+    sh_mem.o                   480
     startup_MCIMX7D_M4.o       612
-    system_MCIMX7D_M4.o        384
-    tasks.o                  1 936       12      232
-    uart_imx.o                 564       60
-    virtqueue.o              1 242
+    system_MCIMX7D_M4.o        272
+    tasks.o                  1 760        7      232
+    uart_imx.o                 548
+    virtqueue.o                848
     ------------------------------------------------
-    Total:                  17 836    1 526   21 293
+    Total:                  17 286      555   21 296
 
 command line: [2]
     ------------------------------------------------
@@ -323,18 +257,20 @@ m7M_tls.a: [4]
     Total:                      34
 
 rt7M_tl.a: [5]
+    ABImemclr4.o                 6
     ABImemcpy_unaligned.o      118
     ABImemset.o                102
+    ABImemset48.o               50
     cexit.o                     10
     cmain.o                     26
-    copy_init3.o                44
     cstartup_M.o                12
     data_init.o                 40
+    packbits_init.o            206
     strlen.o                    54
     strncpy_unaligned.o        108
     zero_init3.o                64
     ------------------------------------------------
-    Total:                     578
+    Total:                     796
 
 shb_l.a: [6]
     ABIassert.o                 36
@@ -342,10 +278,10 @@ shb_l.a: [6]
     ------------------------------------------------
     Total:                      56
 
-    Gaps                         8        4
-    Linker created                       36    1 024
+    Gaps                         8        2
+    Linker created                       44    1 024
 ----------------------------------------------------
-    Grand Total:            18 570    1 566   22 317
+    Grand Total:            18 238      601   22 320
 
 
 *******************************************************************************
@@ -354,358 +290,310 @@ shb_l.a: [6]
 
 Entry                      Address    Size  Type      Object
 -----                      -------    ----  ----      ------
-.iar.init_table$$Base   0x1fffcc18           --   Gb  - Linker created -
-.iar.init_table$$Limit  0x1fffcc3c           --   Gb  - Linker created -
-?main                   0x1fffccf5          Code  Gb  cmain.o [5]
-BOARD_ClockInit         0x1fffbfc3    0xa8  Code  Gb  board.o [1]
-BOARD_RdcInit           0x1fffc0bb    0x10  Code  Gb  board.o [1]
+.iar.init_table$$Base   0x1fffc6ec           --   Gb  - Linker created -
+.iar.init_table$$Limit  0x1fffc718           --   Gb  - Linker created -
+?main                   0x1fffc719          Code  Gb  cmain.o [5]
+BOARD_ClockInit         0x1fffc375    0x5e  Code  Gb  board.o [1]
+BOARD_RdcInit           0x1fffc41d     0x8  Code  Gb  board.o [1]
+CCM_ANALOG_GetPfdFreq   0x1fffc29d    0x58  Code  Gb  ccm_analog_imx7d.o [1]
 CCM_ANALOG_GetSysPllFreq
-                        0x1fffc413    0x26  Code  Gb  ccm_analog_imx7d.o [1]
-CCM_ANALOG_IsPllBypassed
-                        0x1fffc405     0xe  Code  Lc  ccm_analog_imx7d.o [1]
-CCM_ControlGate         0x1fffbfb3     0x4  Code  Lc  board.o [1]
-CCM_EnableRoot          0x1fffbfa9     0xa  Code  Lc  board.o [1]
-CCM_GetRootDivider      0x1fffc115    0x32  Code  Gb  ccm_imx7d.o [1]
-CCM_GetRootMux          0x1fffc1f5     0xa  Code  Lc  clock_freq.o [1]
-CCM_UpdateRoot          0x1fffc147    0x58  Code  Gb  ccm_imx7d.o [1]
+                        0x1fffc281    0x1c  Code  Gb  ccm_analog_imx7d.o [1]
+CCM_GetRootDivider      0x1fffc19d    0x32  Code  Gb  ccm_imx7d.o [1]
+CCM_UpdateRoot          0x1fffc1cf    0x5a  Code  Gb  ccm_imx7d.o [1]
 CSTACK$$Base            0x20007c00           --   Gb  - Linker created -
 CSTACK$$Limit           0x20008000           --   Gb  - Linker created -
-DbgConsole_Init         0x1fffc293    0x58  Code  Gb  debug_console_imx.o [1]
-HelloTask               0x1fffc543    0x1a  Code  Gb  main.o [1]
-MU_EnableRxFullInt      0x1fffa8b9    0x12  Code  Lc  platform.o [1]
-MU_Init                 0x1fffc487     0xc  Code  Lc  main.o [1]
-MU_IsRxFull             0x1fffb309    0x16  Code  Lc  mu_imx.o [1]
-MU_M4_Handler           0x1fffc53b     0x8  Code  Gb  main.o [1]
-MU_SendMsg              0x1fffb31f    0x2c  Code  Gb  mu_imx.o [1]
-MU_TryReceiveMsg        0x1fffb34b    0x36  Code  Gb  mu_imx.o [1]
-NVIC_DisableIRQ         0x1fffa8a5    0x14  Code  Lc  platform.o [1]
-NVIC_EnableIRQ          0x1fffc44d    0x14  Code  Lc  main.o [1]
-NVIC_EnableIRQ          0x1fffa891    0x14  Code  Lc  platform.o [1]
-NVIC_SetPriority        0x1fffc461    0x26  Code  Lc  main.o [1]
-PendSV_Handler          0x1fff89d1          Code  Gb  portasm.o [1]
-RDC_SetDomainID         0x1fffbf3d    0x3a  Code  Lc  board.o [1]
-RDC_SetPdapAccess       0x1fffbf77    0x32  Code  Lc  board.o [1]
+DbgConsole_Init         0x1fffb8bd    0x50  Code  Gb  debug_console_imx.o [1]
+GPT2_Handler            0x1fffb6eb     0x8  Code  Gb  main.o [1]
+GPT_Init                0x1fffbcdd    0x60  Code  Gb  gpt.o [1]
+GPT_SetClockSource      0x1fffbd3d    0x46  Code  Gb  gpt.o [1]
+GPT_SetIntCmd           0x1fffbd83    0x10  Code  Gb  gpt.o [1]
+HelloTask               0x1fffb651    0x18  Code  Gb  main.o [1]
+InStream_StepRegion     0x1fffc591    0x14  Code  Lc  packbits_init.o [5]
+MU_M4_Handler           0x1fffb64d     0x4  Code  Gb  main.o [1]
+MU_SendMsg              0x1fffaca1    0x30  Code  Gb  mu_imx.o [1]
+MU_TryReceiveMsg        0x1fffacd1    0x3a  Code  Gb  mu_imx.o [1]
+PendSV_Handler          0x1fffaff9          Code  Gb  portasm.o [1]
 RW$$Base                0x20000000           --   Gb  - Linker created -
-RW$$Limit               0x2000016c           --   Gb  - Linker created -
-Region$$Table$$Base     0x1fffcc18           --   Gb  - Linker created -
-Region$$Table$$Limit    0x1fffcc3c           --   Gb  - Linker created -
-Reset_Handler           0x1fffce05          Code  Wk  startup_MCIMX7D_M4.o [1]
-SVC_Handler             0x1fff8a35          Code  Gb  portasm.o [1]
-SysTick_Handler         0x1fff8bab    0x1e  Code  Gb  port.o [1]
-SystemInit              0x1fffc605   0x148  Code  Gb  system_MCIMX7D_M4.o [1]
-SystemStateTask         0x1fffc493    0xa8  Code  Gb  main.o [1]
-UART_Deinit             0x1fffbd6b    0x64  Code  Gb  uart_imx.o [1]
-UART_Enable             0x1fffc279     0xe  Code  Lc  debug_console_imx.o [1]
-UART_GetStatusFlag      0x1fffbf17    0x14  Code  Gb  uart_imx.o [1]
-UART_Getchar            0x1fffc28d     0x6  Code  Lc  debug_console_imx.o [1]
-UART_Init               0x1fffbd09    0x62  Code  Gb  uart_imx.o [1]
-UART_Putchar            0x1fffc287     0x6  Code  Lc  debug_console_imx.o [1]
+RW$$Limit               0x2000526c           --   Gb  - Linker created -
+Region$$Table$$Base     0x1fffc6ec           --   Gb  - Linker created -
+Region$$Table$$Limit    0x1fffc718           --   Gb  - Linker created -
+Reset_Handler           0x1fffc749          Code  Wk  startup_MCIMX7D_M4.o [1]
+SVC_Handler             0x1fffb05d          Code  Gb  portasm.o [1]
+SysTick_Handler         0x1fffaec3    0x22  Code  Gb  port.o [1]
+SystemInit              0x1fffc481    0xea  Code  Gb  system_MCIMX7D_M4.o [1]
+SystemStateTask         0x1fffb5a1    0xac  Code  Gb  main.o [1]
+UART_Deinit             0x1fffbf8d    0x62  Code  Gb  uart_imx.o [1]
+UART_GetStatusFlag      0x1fffc101     0xe  Code  Gb  uart_imx.o [1]
+UART_Init               0x1fffbf29    0x64  Code  Gb  uart_imx.o [1]
 UART_ReceiveDataPolling
-                        0x1fffc3d9    0x2c  Code  Lc  debug_console_imx.o [1]
-UART_SendDataPolling    0x1fffc391    0x36  Code  Lc  debug_console_imx.o [1]
-UART_SetBaudRate        0x1fffbdcf   0x148  Code  Gb  uart_imx.o [1]
-WDOG_DisablePowerdown   0x1fffbfb7     0xc  Code  Lc  board.o [1]
-ZI$$Base                0x2000016c           --   Gb  - Linker created -
+                        0x1fffb9f1    0x26  Code  Lc  debug_console_imx.o [1]
+UART_SendDataPolling    0x1fffb9ad    0x38  Code  Lc  debug_console_imx.o [1]
+UART_SetBaudRate        0x1fffbff1   0x104  Code  Gb  uart_imx.o [1]
+ZI$$Base                0x2000526c           --   Gb  - Linker created -
 ZI$$Limit               0x20005330           --   Gb  - Linker created -
 __VECTOR_TABLE {Abs}    0x1fff8000          Data  Gb  command line/config [2]
-__aeabi_assert          0x1fffaadd    0x24  Code  Gb  ABIassert.o [6]
-__aeabi_memset          0x1fffab01          Code  Gb  ABImemset.o [5]
-__cmain                 0x1fffccf5          Code  Gb  cmain.o [5]
-__exit                  0x1fffb395    0x14  Code  Gb  exit.o [6]
-__iar_Memset            0x1fffab01          Code  Gb  ABImemset.o [5]
-__iar_Memset_word       0x1fffab09          Code  Gb  ABImemset.o [5]
-__iar_copy_init3        0x1fffcb31    0x2c  Code  Gb  copy_init3.o [5]
-__iar_data_init3        0x1fffcb85    0x28  Code  Gb  data_init.o [5]
-__iar_init_vfp          0x1fffcbf5          Code  Gb  fpinit_M.o [4]
-__iar_program_start     0x1fffce61          Code  Gb  cstartup_M.o [5]
+__aeabi_assert          0x1fff9851    0x24  Code  Gb  ABIassert.o [6]
+__aeabi_memclr4         0x1fff9875          Code  Gb  ABImemclr4.o [5]
+__aeabi_memset          0x1fff9cf9          Code  Gb  ABImemset.o [5]
+__cmain                 0x1fffc719          Code  Gb  cmain.o [5]
+__exit                  0x1fffb0a9    0x14  Code  Gb  exit.o [6]
+__iar_Memset            0x1fff9cf9          Code  Gb  ABImemset.o [5]
+__iar_Memset4_word      0x1fffac6d          Code  Gb  ABImemset48.o [5]
+__iar_Memset8_word      0x1fffac6d          Code  Gb  ABImemset48.o [5]
+__iar_Memset_word       0x1fff9d01          Code  Gb  ABImemset.o [5]
+__iar_data_init3        0x1fffc6a1    0x28  Code  Gb  data_init.o [5]
+__iar_init_vfp          0x1fffc6c9          Code  Gb  fpinit_M.o [4]
+__iar_packbits_init3    0x1fffc5a5    0xba  Code  Gb  packbits_init.o [5]
+__iar_program_start     0x1fffc75d          Code  Gb  cstartup_M.o [5]
 __iar_unaligned___aeabi_memcpy
-                        0x1fffab69          Code  Gb  ABImemcpy_unaligned.o [5]
+                        0x1fff9d61          Code  Gb  ABImemcpy_unaligned.o [5]
 __iar_unaligned___aeabi_memcpy4
-                        0x1fffab89          Code  Gb  ABImemcpy_unaligned.o [5]
+                        0x1fff9d81          Code  Gb  ABImemcpy_unaligned.o [5]
 __iar_unaligned___aeabi_memcpy8
-                        0x1fffab89          Code  Gb  ABImemcpy_unaligned.o [5]
+                        0x1fff9d81          Code  Gb  ABImemcpy_unaligned.o [5]
 __iar_unaligned_strncpy
-                        0x1fffabe1          Code  Gb  strncpy_unaligned.o [5]
-__iar_zero_init3        0x1fffca21    0x40  Code  Gb  zero_init3.o [5]
-__low_level_init        0x1fffcd0f     0x4  Code  Gb  low_level_init.o [3]
+                        0x1fff9dd9          Code  Gb  strncpy_unaligned.o [5]
+__iar_zero_init3        0x1fffc65f    0x40  Code  Gb  zero_init3.o [5]
+__low_level_init        0x1fffc733     0x4  Code  Gb  low_level_init.o [3]
 __vector_table          0x1fff8000          Data  Gb  startup_MCIMX7D_M4.o [1]
-_boot_cpu               0x1fffa8fd    0x18  Code  Lc  platform.o [1]
-_call_main              0x1fffcd01          Code  Gb  cmain.o [5]
-_create_endpoint        0x1fff8fe7    0xc2  Code  Gb  rpmsg_core.o [1]
-_destroy_endpoint       0x1fff90bd    0x44  Code  Gb  rpmsg_core.o [1]
-_doprint                0x1fffb3a9   0x4ee  Code  Gb  print_scan.o [1]
-_enable_interrupt       0x1fffa8cb    0x1c  Code  Lc  platform.o [1]
-_exit                   0x1fffcd19          Code  Gb  cexit.o [5]
-_main                   0x1fffcd0b          Code  Gb  cmain.o [5]
-_notify                 0x1fffa8e7    0x16  Code  Lc  platform.o [1]
-_rpmsg_create_channel   0x1fff8f37    0x72  Code  Gb  rpmsg_core.o [1]
-_rpmsg_delete_channel   0x1fff8fa9    0x3e  Code  Gb  rpmsg_core.o [1]
-_shutdown_cpu           0x1fffa915    0x14  Code  Lc  platform.o [1]
-abort                   0x1fffb38d     0x6  Code  Gb  abort.o [3]
-add_to_list             0x1fffa131    0x2a  Code  Gb  llist.o [1]
-callback_sync           0x20005240     0x4  Data  Lc  rpmsg_rtos.o [1]
-configure_uart_pins     0x1fffc1b5    0x28  Code  Gb  pin_mux.o [1]
-dbg_uart_init           0x1fffc06b    0x50  Code  Gb  board.o [1]
-debug_getchar           0x1fffc36b    0x24  Code  Gb  debug_console_imx.o [1]
-debug_printf            0x1fffc2eb    0x34  Code  Gb  debug_console_imx.o [1]
-debug_putc              0x1fffc321    0x2c  Code  Lc  debug_console_imx.o [1]
-debug_putchar           0x1fffc34d    0x1e  Code  Gb  debug_console_imx.o [1]
-default_chnl            0x20005238     0x4  Data  Lc  rpmsg_rtos.o [1]
-default_q               0x2000523c     0x4  Data  Lc  rpmsg_rtos.o [1]
-disable_counter_all     0x2000519c     0x4  Data  Lc  platform.o [1]
-disable_counters        0x20005194     0x8  Data  Lc  platform.o [1]
-env_acquire_sync_lock   0x1fff9ead    0x3c  Code  Gb  rpmsg_porting.o [1]
-env_allocate_memory     0x1fff9d99     0xc  Code  Gb  rpmsg_porting.o [1]
-env_create_mutex        0x1fff9e1f    0x20  Code  Gb  rpmsg_porting.o [1]
-env_create_queue        0x1fffa035    0x24  Code  Gb  rpmsg_porting.o [1]
-env_create_sync_lock    0x1fff9e8d    0x10  Code  Gb  rpmsg_porting.o [1]
-env_deinit              0x1fff9d37    0x62  Code  Gb  rpmsg_porting.o [1]
-env_delete_mutex        0x1fff9e3f     0xc  Code  Gb  rpmsg_porting.o [1]
-env_delete_sync_lock    0x1fff9e9d    0x10  Code  Gb  rpmsg_porting.o [1]
-env_disable_interrupt   0x1fff9fb3     0xc  Code  Gb  rpmsg_porting.o [1]
-env_enable_interrupt    0x1fff9f6f    0x44  Code  Gb  rpmsg_porting.o [1]
-env_free_memory         0x1fff9da5     0xc  Code  Gb  rpmsg_porting.o [1]
-env_get_queue           0x1fffa0b5    0x5a  Code  Gb  rpmsg_porting.o [1]
-env_in_isr              0x1fff9ccd     0x8  Code  Gb  rpmsg_porting.o [1]
-env_init                0x1fff9cd5    0x62  Code  Gb  rpmsg_porting.o [1]
-env_init_counter        0x200051e4     0x4  Data  Lc  rpmsg_porting.o [1]
-env_isr                 0x1fff9fd7    0x5e  Code  Gb  rpmsg_porting.o [1]
-env_lock_mutex          0x1fff9e4b    0x22  Code  Gb  rpmsg_porting.o [1]
-env_map_memory          0x1fff9fbf    0x18  Code  Gb  rpmsg_porting.o [1]
-env_map_patova          0x1fff9e13     0xc  Code  Gb  rpmsg_porting.o [1]
-env_map_vatopa          0x1fff9e07     0xc  Code  Gb  rpmsg_porting.o [1]
-env_mb                  0x1fff9e01     0x2  Code  Gb  rpmsg_porting.o [1]
-env_memcpy              0x1fff9dc5    0x14  Code  Gb  rpmsg_porting.o [1]
-env_memset              0x1fff9db1    0x14  Code  Gb  rpmsg_porting.o [1]
-env_put_queue           0x1fffa059    0x5c  Code  Gb  rpmsg_porting.o [1]
-env_register_isr        0x1fff9f35    0x3a  Code  Gb  rpmsg_porting.o [1]
-env_release_sync_lock   0x1fff9ee9    0x3c  Code  Gb  rpmsg_porting.o [1]
-env_rmb                 0x1fff9e03     0x2  Code  Gb  rpmsg_porting.o [1]
-env_sleep_msec          0x1fff9f25    0x10  Code  Gb  rpmsg_porting.o [1]
-env_strncmp             0x1fff9ded    0x14  Code  Gb  rpmsg_porting.o [1]
-env_strncpy             0x1fff9dd9    0x14  Code  Gb  rpmsg_porting.o [1]
-env_unlock_mutex        0x1fff9e6d    0x20  Code  Gb  rpmsg_porting.o [1]
-env_wmb                 0x1fff9e05     0x2  Code  Gb  rpmsg_porting.o [1]
-exit                    0x1fffcd13     0x4  Code  Gb  exit.o [3]
-fput_pad                0x1fffb965    0x32  Code  Lc  print_scan.o [1]
-get_first_zero_bit      0x1fffa805    0x36  Code  Gb  sh_mem.o [1]
-get_uart_clock_freq     0x1fffc1ff    0x66  Code  Gb  clock_freq.o [1]
-hardware_init           0x1fffc5f5    0x10  Code  Gb  hardware_init.o [1]
-heapSTRUCT_SIZE         0x1fff8ce6     0x2  Data  Lc  heap_2.o [1]
-hil_create_proc         0x1fff97a9    0x80  Code  Gb  hil.o [1]
+_boot_cpu               0x1fff98ad    0x1a  Code  Lc  platform.o [1]
+_call_main              0x1fffc725          Code  Gb  cmain.o [5]
+_create_endpoint        0x1fff83e9    0xca  Code  Gb  rpmsg_core.o [1]
+_destroy_endpoint       0x1fff84b3    0x5e  Code  Gb  rpmsg_core.o [1]
+_doprint                0x1fffb0bd   0x4a0  Code  Gb  print_scan.o [1]
+_enable_interrupt       0x1fff987d    0x24  Code  Lc  platform.o [1]
+_exit                   0x1fffc73d          Code  Gb  cexit.o [5]
+_main                   0x1fffc72f          Code  Gb  cmain.o [5]
+_notify                 0x1fff98a1     0xc  Code  Lc  platform.o [1]
+_rpmsg_create_channel   0x1fff8341    0x64  Code  Gb  rpmsg_core.o [1]
+_rpmsg_delete_channel   0x1fff83a5    0x44  Code  Gb  rpmsg_core.o [1]
+_shutdown_cpu           0x1fff98c7    0x18  Code  Lc  platform.o [1]
+abort                   0x1fffac65     0x6  Code  Gb  abort.o [3]
+add_to_list             0x1fff8d39    0x22  Code  Gb  llist.o [1]
+callback_sync           0x20005328     0x4  Data  Lc  rpmsg_rtos.o [1]
+configure_uart_pins     0x1fffc455    0x20  Code  Gb  pin_mux.o [1]
+dbg_uart_init           0x1fffc3d3    0x4a  Code  Gb  board.o [1]
+debug_getchar           0x1fffb989    0x24  Code  Gb  debug_console_imx.o [1]
+debug_printf            0x1fffb90d    0x30  Code  Gb  debug_console_imx.o [1]
+debug_putc              0x1fffb93d    0x26  Code  Lc  debug_console_imx.o [1]
+debug_putchar           0x1fffb963    0x26  Code  Gb  debug_console_imx.o [1]
+default_chnl            0x20005320     0x4  Data  Lc  rpmsg_rtos.o [1]
+default_q               0x20005324     0x4  Data  Lc  rpmsg_rtos.o [1]
+disable_counter_all     0x20005288     0x4  Data  Lc  platform.o [1]
+disable_counters        0x20005280     0x8  Data  Lc  platform.o [1]
+env_acquire_sync_lock   0x1fff8a61    0x3c  Code  Gb  rpmsg_porting.o [1]
+env_allocate_memory     0x1fff89b5     0x4  Code  Gb  rpmsg_porting.o [1]
+env_create_mutex        0x1fff89e1    0x18  Code  Gb  rpmsg_porting.o [1]
+env_create_queue        0x1fff8bbb    0x1c  Code  Gb  rpmsg_porting.o [1]
+env_create_sync_lock    0x1fff8a3f    0x18  Code  Gb  rpmsg_porting.o [1]
+env_deinit              0x1fff896f    0x46  Code  Gb  rpmsg_porting.o [1]
+env_delete_mutex        0x1fff89f9     0x4  Code  Gb  rpmsg_porting.o [1]
+env_delete_sync_lock    0x1fff8a57     0xa  Code  Gb  rpmsg_porting.o [1]
+env_enable_interrupt    0x1fff8b09    0x38  Code  Gb  rpmsg_porting.o [1]
+env_free_memory         0x1fff89b9     0x4  Code  Gb  rpmsg_porting.o [1]
+env_get_queue           0x1fff8c2f    0x56  Code  Gb  rpmsg_porting.o [1]
+env_init                0x1fff8929    0x46  Code  Gb  rpmsg_porting.o [1]
+env_init_counter        0x2000531c     0x4  Data  Lc  rpmsg_porting.o [1]
+env_isr                 0x1fff8b53    0x68  Code  Gb  rpmsg_porting.o [1]
+env_lock_mutex          0x1fff89fd    0x22  Code  Gb  rpmsg_porting.o [1]
+env_map_memory          0x1fff8b41    0x12  Code  Gb  rpmsg_porting.o [1]
+env_map_patova          0x1fff89dd     0x4  Code  Gb  rpmsg_porting.o [1]
+env_map_vatopa          0x1fff89d9     0x4  Code  Gb  rpmsg_porting.o [1]
+env_mb                  0x1fff89d3     0x2  Code  Gb  rpmsg_porting.o [1]
+env_memcpy              0x1fff89c7     0x4  Code  Gb  rpmsg_porting.o [1]
+env_memset              0x1fff89bd     0xa  Code  Gb  rpmsg_porting.o [1]
+env_put_queue           0x1fff8bd7    0x58  Code  Gb  rpmsg_porting.o [1]
+env_register_isr        0x1fff8add    0x2c  Code  Gb  rpmsg_porting.o [1]
+env_release_sync_lock   0x1fff8a9d    0x3c  Code  Gb  rpmsg_porting.o [1]
+env_rmb                 0x1fff89d5     0x2  Code  Gb  rpmsg_porting.o [1]
+env_sleep_msec          0x1fff8ad9     0x4  Code  Gb  rpmsg_porting.o [1]
+env_strncmp             0x1fff89cf     0x4  Code  Gb  rpmsg_porting.o [1]
+env_strncpy             0x1fff89cb     0x4  Code  Gb  rpmsg_porting.o [1]
+env_unlock_mutex        0x1fff8a1f    0x20  Code  Gb  rpmsg_porting.o [1]
+env_wmb                 0x1fff89d7     0x2  Code  Gb  rpmsg_porting.o [1]
+exit                    0x1fffc737     0x4  Code  Gb  exit.o [3]
+get_first_zero_bit      0x1fff9679    0x32  Code  Gb  sh_mem.o [1]
+get_gpt_clock_freq      0x1fffbde9    0x68  Code  Gb  clock_freq.o [1]
+get_uart_clock_freq     0x1fffbe51    0x5c  Code  Gb  clock_freq.o [1]
+hardware_init           0x1fffbed1    0x58  Code  Gb  hardware_init.o [1]
+hil_create_proc         0x1fff8d85    0x56  Code  Gb  hil.o [1]
 hil_enable_vring_notifications
-                        0x1fff984d    0x2c  Code  Gb  hil.o [1]
-hil_get_chnl_info       0x1fff9839     0x8  Code  Gb  hil.o [1]
-hil_get_shm_info        0x1fff9849     0x4  Code  Gb  hil.o [1]
-hil_get_status          0x1fff98a5     0x6  Code  Gb  hil.o [1]
-hil_get_vring_info      0x1fff9841     0x8  Code  Gb  hil.o [1]
-hil_isr                 0x1fff9829     0xc  Code  Gb  hil.o [1]
-hil_set_status          0x1fff98ab     0x6  Code  Gb  hil.o [1]
-hil_vring_notify        0x1fff9879    0x2c  Code  Gb  hil.o [1]
-isr_table               0x200051e8    0x50  Data  Lc  rpmsg_porting.o [1]
-main                    0x1fffc55d    0x5c  Code  Gb  main.o [1]
-mknumstr                0x1fffb89d    0xc8  Code  Lc  print_scan.o [1]
-pcInterruptPriorityRegisters
-                        0x1fffcea0     0x4  Data  Lc  port.o [1]
-platform_deinit         0x1fffaad7     0x4  Code  Gb  platform.o [1]
+                        0x1fff8df9    0x22  Code  Gb  hil.o [1]
+hil_get_chnl_info       0x1fff8de5     0x8  Code  Gb  hil.o [1]
+hil_get_shm_info        0x1fff8df5     0x4  Code  Gb  hil.o [1]
+hil_get_status          0x1fff8e39     0x4  Code  Gb  hil.o [1]
+hil_get_vring_info      0x1fff8ded     0x8  Code  Gb  hil.o [1]
+hil_isr                 0x1fff8ddb     0x6  Code  Gb  hil.o [1]
+hil_set_status          0x1fff8e3d     0x4  Code  Gb  hil.o [1]
+hil_vring_notify        0x1fff8e1b    0x1e  Code  Gb  hil.o [1]
+initInputCaptureGPT     0x1fffb669    0x82  Code  Gb  main.o [1]
+isr_table               0x200052cc    0x50  Data  Lc  rpmsg_porting.o [1]
+main                    0x1fffb6f3    0x60  Code  Gb  main.o [1]
+platform_deinit         0x1fff9a9b     0x4  Code  Gb  platform.o [1]
 platform_get_processor_info
-                        0x1fffa849    0x42  Code  Gb  platform_info.o [1]
-platform_in_isr         0x1fffa957    0x12  Code  Gb  platform.o [1]
-platform_init           0x1fffaad3     0x4  Code  Gb  platform.o [1]
+                        0x1fffac31    0x2e  Code  Gb  platform_info.o [1]
+platform_in_isr         0x1fff9903    0x12  Code  Gb  platform.o [1]
+platform_init           0x1fff9a97     0x4  Code  Gb  platform.o [1]
 platform_interrupt_disable
-                        0x1fffa9cb    0x66  Code  Gb  platform.o [1]
+                        0x1fff996f    0x5a  Code  Gb  platform.o [1]
 platform_interrupt_disable_all
-                        0x1fffaa67    0x32  Code  Gb  platform.o [1]
+                        0x1fff9a1b    0x58  Code  Gb  platform.o [1]
 platform_interrupt_enable
-                        0x1fffa969    0x62  Code  Gb  platform.o [1]
+                        0x1fff9915    0x5a  Code  Gb  platform.o [1]
 platform_interrupt_enable_all
-                        0x1fffaa31    0x36  Code  Gb  platform.o [1]
-platform_isr            0x1fffa949     0xe  Code  Gb  platform.o [1]
+                        0x1fff99c9    0x52  Code  Gb  platform.o [1]
+platform_isr            0x1fff98fd     0x6  Code  Gb  platform.o [1]
 platform_map_mem_region
-                        0x1fffaacd     0x2  Code  Gb  platform.o [1]
-platform_patova         0x1fffaad1     0x2  Code  Gb  platform.o [1]
-platform_vatopa         0x1fffaacf     0x2  Code  Gb  platform.o [1]
-proc_ops                0x20000004    0x1c  Data  Gb  platform.o [1]
-proc_table              0x20000020   0x120  Data  Gb  platform_info.o [1]
-procs                   0x20005190     0x4  Data  Gb  hil.o [1]
-prvAddCurrentTaskToDelayedList
-                        0x1fff88e7    0x3e  Code  Lc  tasks.o [1]
-prvAllocateTCBAndStack  0x1fff8925    0x38  Code  Lc  tasks.o [1]
-prvCheckTasksWaitingTermination
-                        0x1fff88e5     0x2  Code  Lc  tasks.o [1]
-prvCopyDataFromQueue    0x1fffb203    0x30  Code  Lc  queue.o [1]
-prvCopyDataToQueue      0x1fffb183    0x80  Code  Lc  queue.o [1]
-prvHeapInit             0x1fff8def    0x2e  Code  Lc  heap_2.o [1]
-prvIdleTask             0x1fff883d     0xa  Code  Lc  tasks.o [1]
-prvInitialiseTCBVariables
-                        0x1fff8847    0x5c  Code  Lc  tasks.o [1]
-prvInitialiseTaskLists  0x1fff88a3    0x42  Code  Lc  tasks.o [1]
-prvIsQueueEmpty         0x1fffb29d    0x20  Code  Lc  queue.o [1]
-prvIsQueueFull          0x1fffb2bd    0x22  Code  Lc  queue.o [1]
-prvResetNextTaskUnblockTime
-                        0x1fff895d    0x26  Code  Lc  tasks.o [1]
-prvTaskExitError        0x1fff8aa5    0x18  Code  Lc  port.o [1]
-prvUnlockQueue          0x1fffb233    0x6a  Code  Lc  queue.o [1]
-pvPortMalloc            0x1fff8ce9    0xc2  Code  Gb  heap_2.o [1]
+                        0x1fff9a91     0x2  Code  Gb  platform.o [1]
+platform_patova         0x1fff9a95     0x2  Code  Gb  platform.o [1]
+platform_vatopa         0x1fff9a93     0x2  Code  Gb  platform.o [1]
+proc_ops                0x20005018    0x1c  Data  Gb  platform.o [1]
+proc_table              0x20005034   0x120  Data  Gb  platform_info.o [1]
+procs                   0x2000527c     0x4  Data  Gb  hil.o [1]
+prvCopyDataFromQueue    0x1fffa4b3    0x2e  Code  Lc  queue.o [1]
+prvCopyDataToQueue      0x1fffa44f    0x64  Code  Lc  queue.o [1]
+prvIdleTask             0x1fffac21     0x2  Code  Lc  tasks.o [1]
+prvTaskExitError        0x1fffad91    0x1a  Code  Lc  port.o [1]
+prvUnlockQueue          0x1fffa4e5    0x68  Code  Lc  queue.o [1]
+pvPortMalloc            0x1fff9b8d   0x106  Code  Gb  heap_2.o [1]
 pvPortMalloc::xHeapHasBeenInitialised
-                        0x2000518c     0x4  Data  Lc  heap_2.o [1]
-pxCurrentTCB            0x20005248     0x4  Data  Gb  tasks.o [1]
-pxDelayedTaskList       0x200052d8     0x4  Data  Lc  tasks.o [1]
+                        0x20000014     0x4  Data  Lc  heap_2.o [1]
+pxCurrentTCB            0x20005198     0x4  Data  Gb  tasks.o [1]
+pxDelayedTaskList       0x20005200     0x4  Data  Lc  tasks.o [1]
 pxOverflowDelayedTaskList
-                        0x200052dc     0x4  Data  Lc  tasks.o [1]
-pxPortInitialiseStack   0x1fff8a81    0x24  Code  Gb  port.o [1]
-pxReadyTasksLists       0x2000524c    0x64  Data  Lc  tasks.o [1]
-remove_from_list        0x1fffa15b    0x36  Code  Gb  llist.o [1]
+                        0x20005204     0x4  Data  Lc  tasks.o [1]
+pxPortInitialiseStack   0x1fffad6d    0x22  Code  Gb  port.o [1]
+pxReadyTasksLists       0x2000519c    0x64  Data  Lc  tasks.o [1]
+remove_from_list        0x1fff8d5b    0x2a  Code  Gb  llist.o [1]
 rpmsg_channel_created_rtos
-                        0x1fffb9d1    0x58  Code  Lc  rpmsg_rtos.o [1]
+                        0x1fffba31    0x4c  Code  Lc  rpmsg_rtos.o [1]
 rpmsg_channel_deleted_rtos
-                        0x1fffba29    0x24  Code  Lc  rpmsg_rtos.o [1]
-rpmsg_create_ept        0x1fff9749    0x44  Code  Gb  rpmsg.o [1]
-rpmsg_deinit            0x1fff95d5    0x14  Code  Gb  rpmsg.o [1]
-rpmsg_destroy_ept       0x1fff978d    0x1a  Code  Gb  rpmsg.o [1]
-rpmsg_enqueue_buffer    0x1fff9169    0x48  Code  Gb  rpmsg_core.o [1]
-rpmsg_free_buffer       0x1fff925d    0x16  Code  Gb  rpmsg_core.o [1]
-rpmsg_get_address       0x1fff9499    0x46  Code  Gb  rpmsg_core.o [1]
-rpmsg_get_rx_buffer     0x1fff922f    0x2e  Code  Gb  rpmsg_core.o [1]
-rpmsg_get_tx_buffer     0x1fff91ef    0x40  Code  Gb  rpmsg_core.o [1]
-rpmsg_handler           0x1fffa929    0x20  Code  Gb  platform.o [1]
-rpmsg_hold_rx_buffer    0x1fffbca1    0x1c  Code  Gb  rpmsg_ext.o [1]
-rpmsg_init              0x1fff9581    0x54  Code  Gb  rpmsg.o [1]
-rpmsg_is_address_set    0x1fff9517    0x32  Code  Gb  rpmsg_core.o [1]
-rpmsg_ns_callback       0x1fff93e1    0xb8  Code  Gb  rpmsg_core.o [1]
-rpmsg_queue_size        0x20005244     0x4  Data  Lc  rpmsg_rtos.o [1]
-rpmsg_rdev_config_ops   0x20000144    0x24  Data  Gb  remote_device.o [1]
+                        0x1fffba7d    0x22  Code  Lc  rpmsg_rtos.o [1]
+rpmsg_create_ept        0x1fff9829    0x1a  Code  Gb  rpmsg.o [1]
+rpmsg_destroy_ept       0x1fff9843     0xe  Code  Gb  rpmsg.o [1]
+rpmsg_enqueue_buffer    0x1fff856f    0x30  Code  Gb  rpmsg_core.o [1]
+rpmsg_free_buffer       0x1fff8605    0x10  Code  Gb  rpmsg_core.o [1]
+rpmsg_get_address       0x1fff88d1    0x46  Code  Gb  rpmsg_core.o [1]
+rpmsg_get_tx_buffer     0x1fff85cf    0x36  Code  Gb  rpmsg_core.o [1]
+rpmsg_handler           0x1fff98df    0x1c  Code  Gb  platform.o [1]
+rpmsg_hold_rx_buffer    0x1fffc14d    0x16  Code  Gb  rpmsg_ext.o [1]
+rpmsg_init              0x1fff96bd    0x4e  Code  Gb  rpmsg.o [1]
+rpmsg_ns_callback       0x1fff87f1    0xde  Code  Gb  rpmsg_core.o [1]
+rpmsg_queue_size        0x2000532c     0x4  Data  Lc  rpmsg_rtos.o [1]
+rpmsg_rdev_config_ops   0x20005160    0x24  Data  Gb  remote_device.o [1]
 rpmsg_rdev_create_virtqueues
-                        0x1fff9b5d   0x138  Code  Gb  remote_device.o [1]
-rpmsg_rdev_deinit       0x1fff99b5    0xa2  Code  Gb  remote_device.o [1]
+                        0x1fff9041   0x116  Code  Gb  remote_device.o [1]
+rpmsg_rdev_deinit       0x1fff8f0d    0x78  Code  Gb  remote_device.o [1]
 rpmsg_rdev_get_chnl_node_from_id
-                        0x1fff9a57    0x3e  Code  Gb  remote_device.o [1]
+                        0x1fff8f85    0x36  Code  Gb  remote_device.o [1]
 rpmsg_rdev_get_endpoint_from_addr
-                        0x1fff9a95    0x34  Code  Gb  remote_device.o [1]
-rpmsg_rdev_get_feature  0x1fff9cb5     0x4  Code  Gb  remote_device.o [1]
-rpmsg_rdev_get_status   0x1fff9cad     0x6  Code  Gb  remote_device.o [1]
-rpmsg_rdev_init         0x1fff98cd    0xe8  Code  Gb  remote_device.o [1]
-rpmsg_rdev_init_channels
-                        0x1fff9afd    0x60  Code  Lc  remote_device.o [1]
+                        0x1fff8fbb    0x56  Code  Gb  remote_device.o [1]
+rpmsg_rdev_get_feature  0x1fff9177     0x4  Code  Gb  remote_device.o [1]
+rpmsg_rdev_get_status   0x1fff9171     0x4  Code  Gb  remote_device.o [1]
+rpmsg_rdev_init         0x1fff8e41    0xcc  Code  Gb  remote_device.o [1]
 rpmsg_rdev_negotiate_feature
-                        0x1fff9cc1     0x6  Code  Gb  remote_device.o [1]
-rpmsg_rdev_notify       0x1fff9ac9    0x34  Code  Gb  remote_device.o [1]
-rpmsg_rdev_read_config  0x1fff9cc7     0x2  Code  Gb  remote_device.o [1]
-rpmsg_rdev_reset        0x1fff9ccb     0x2  Code  Gb  remote_device.o [1]
-rpmsg_rdev_set_feature  0x1fff9cb9     0x8  Code  Gb  remote_device.o [1]
-rpmsg_rdev_set_status   0x1fff9cb3     0x2  Code  Gb  remote_device.o [1]
+                        0x1fff9183     0x4  Code  Gb  remote_device.o [1]
+rpmsg_rdev_notify       0x1fff9011    0x2e  Code  Gb  remote_device.o [1]
+rpmsg_rdev_read_config  0x1fff9187     0x2  Code  Gb  remote_device.o [1]
+rpmsg_rdev_reset        0x1fff918b     0x2  Code  Gb  remote_device.o [1]
+rpmsg_rdev_set_feature  0x1fff917b     0x8  Code  Gb  remote_device.o [1]
+rpmsg_rdev_set_status   0x1fff9175     0x2  Code  Gb  remote_device.o [1]
 rpmsg_rdev_write_config
-                        0x1fff9cc9     0x2  Code  Gb  remote_device.o [1]
-rpmsg_read_rtos_cb      0x1fffba4d    0x60  Code  Lc  rpmsg_rtos.o [1]
-rpmsg_release_address   0x1fff94df    0x38  Code  Gb  rpmsg_core.o [1]
+                        0x1fff9189     0x2  Code  Gb  remote_device.o [1]
+rpmsg_read_rtos_cb      0x1fffba9f    0x56  Code  Lc  rpmsg_rtos.o [1]
 rpmsg_release_rx_buffer
-                        0x1fffbcbd    0x4a  Code  Gb  rpmsg_ext.o [1]
-rpmsg_return_buffer     0x1fff91b1    0x3e  Code  Gb  rpmsg_core.o [1]
-rpmsg_rtos_init         0x1fffbaad    0xde  Code  Gb  rpmsg_rtos.o [1]
-rpmsg_rtos_recv         0x1fffbb8b    0x8c  Code  Gb  rpmsg_rtos.o [1]
-rpmsg_rtos_send         0x1fffbc17    0x46  Code  Gb  rpmsg_rtos.o [1]
-rpmsg_rx_callback       0x1fff92c9   0x116  Code  Lc  rpmsg_core.o [1]
-rpmsg_send              0x1fff8e35    0x28  Code  Lc  rpmsg_core.o [1]
-rpmsg_send_ns_message   0x1fff9101    0x68  Code  Gb  rpmsg_core.o [1]
+                        0x1fffc163    0x38  Code  Gb  rpmsg_ext.o [1]
+rpmsg_return_buffer     0x1fff859f    0x30  Code  Gb  rpmsg_core.o [1]
+rpmsg_rtos_init         0x1fffbaf5    0x9e  Code  Gb  rpmsg_rtos.o [1]
+rpmsg_rtos_recv         0x1fffbb93    0x72  Code  Gb  rpmsg_rtos.o [1]
+rpmsg_rtos_send         0x1fffbc05    0x36  Code  Gb  rpmsg_rtos.o [1]
+rpmsg_rx_callback       0x1fff8699   0x158  Code  Lc  rpmsg_core.o [1]
+rpmsg_send_ns_message   0x1fff8511    0x5e  Code  Gb  rpmsg_core.o [1]
 rpmsg_send_offchannel_raw
-                        0x1fff95e9   0x14a  Code  Gb  rpmsg.o [1]
-rpmsg_set_address       0x1fff9549    0x38  Code  Gb  rpmsg_core.o [1]
-rpmsg_start_ipc         0x1fff8e5d    0xda  Code  Gb  rpmsg_core.o [1]
-rpmsg_tx_callback       0x1fff9275    0x52  Code  Lc  rpmsg_core.o [1]
-s_debugConsole          0x2000016c    0x10  Data  Lc  debug_console_imx.o [1]
-sh_mem_create_pool      0x1fffa66d    0xb0  Code  Gb  sh_mem.o [1]
-sh_mem_delete_pool      0x1fffa7ef    0x16  Code  Gb  sh_mem.o [1]
-sh_mem_free_buffer      0x1fffa793    0x5c  Code  Gb  sh_mem.o [1]
-sh_mem_get_buffer       0x1fffa71d    0x76  Code  Gb  sh_mem.o [1]
-strlen                  0x1fffb999          Code  Gb  strlen.o [5]
-strncmp                 0x1fffac4d    0x2c  Code  Gb  strncmp.o [3]
-ucHeap                  0x2000017c  0x5000  Data  Lc  heap_2.o [1]
-ucMaxSysCallPriority    0x2000532c     0x1  Data  Lc  port.o [1]
-ulMaxPRIGROUPValue      0x200051a0     0x4  Data  Lc  port.o [1]
-ulPortSetInterruptMask  0x1fff8a21          Code  Gb  portasm.o [1]
-uxCriticalNesting       0x20000140     0x4  Data  Lc  port.o [1]
-uxCurrentNumberOfTasks  0x20005308     0x4  Data  Lc  tasks.o [1]
-uxListRemove            0x1fff8cbf    0x28  Code  Gb  list.o [1]
-uxPendedTicks           0x20005318     0x4  Data  Lc  tasks.o [1]
-uxSchedulerSuspended    0x20005328     0x4  Data  Lc  tasks.o [1]
-uxTaskNumber            0x20005324     0x4  Data  Lc  tasks.o [1]
-uxTopReadyPriority      0x20005310     0x4  Data  Lc  tasks.o [1]
-vListInitialise         0x1fff8c49    0x1e  Code  Gb  list.o [1]
-vListInitialiseItem     0x1fff8c67     0x6  Code  Gb  list.o [1]
-vListInsert             0x1fff8c85    0x3a  Code  Gb  list.o [1]
-vListInsertEnd          0x1fff8c6d    0x18  Code  Gb  list.o [1]
+                        0x1fff970b   0x108  Code  Gb  rpmsg.o [1]
+rpmsg_start_ipc         0x1fff8241    0xfa  Code  Gb  rpmsg_core.o [1]
+rpmsg_tx_callback       0x1fff8615    0x84  Code  Lc  rpmsg_core.o [1]
+s_debugConsole          0x2000526c    0x10  Data  Lc  debug_console_imx.o [1]
+sh_mem_create_pool      0x1fff94dd    0x8a  Code  Gb  sh_mem.o [1]
+sh_mem_delete_pool      0x1fff9661    0x18  Code  Gb  sh_mem.o [1]
+sh_mem_free_buffer      0x1fff960f    0x52  Code  Gb  sh_mem.o [1]
+sh_mem_get_buffer       0x1fff9567    0xa8  Code  Gb  sh_mem.o [1]
+strlen                  0x1fffb569          Code  Gb  strlen.o [5]
+strncmp                 0x1fff9e45    0x2c  Code  Gb  strncmp.o [3]
+ucHeap                  0x20000018  0x5000  Data  Lc  heap_2.o [1]
+ucMaxSysCallPriority    0x20005154     0x1  Data  Lc  port.o [1]
+ulMaxPRIGROUPValue      0x2000515c     0x4  Data  Lc  port.o [1]
+ulPortSetInterruptMask  0x1fffb049          Code  Gb  portasm.o [1]
+uxCriticalNesting       0x20005158     0x4  Data  Lc  port.o [1]
+uxCurrentNumberOfTasks  0x2000521c     0x4  Data  Lc  tasks.o [1]
+uxListRemove            0x1fffafd5    0x24  Code  Gb  list.o [1]
+uxPendedTicks           0x2000522c     0x4  Data  Lc  tasks.o [1]
+uxSchedulerSuspended    0x20005240     0x4  Data  Lc  tasks.o [1]
+uxTaskNumber            0x20005238     0x4  Data  Lc  tasks.o [1]
+uxTopReadyPriority      0x20005224     0x4  Data  Lc  tasks.o [1]
+vListInitialise         0x1fffaf45    0x1a  Code  Gb  list.o [1]
+vListInitialiseItem     0x1fffaf5f     0x6  Code  Gb  list.o [1]
+vListInsert             0x1fffaf7d    0x58  Code  Gb  list.o [1]
+vListInsertEnd          0x1fffaf65    0x18  Code  Gb  list.o [1]
 vPortClearInterruptMask
-                        0x1fff8a2f          Code  Gb  portasm.o [1]
-vPortEnableVFP          0x1fff8a67          Code  Gb  portasm.o [1]
-vPortEnterCritical      0x1fff8b67    0x1a  Code  Gb  port.o [1]
-vPortExitCritical       0x1fff8b81    0x2a  Code  Gb  port.o [1]
-vPortFree               0x1fff8dab    0x44  Code  Gb  heap_2.o [1]
+                        0x1fffb057          Code  Gb  portasm.o [1]
+vPortEnableVFP          0x1fffb08f          Code  Gb  portasm.o [1]
+vPortEnterCritical      0x1fffae81    0x1c  Code  Gb  port.o [1]
+vPortExitCritical       0x1fffae9d    0x26  Code  Gb  port.o [1]
+vPortFree               0x1fff9c93    0x62  Code  Gb  heap_2.o [1]
 vPortSetupTimerInterrupt
-                        0x1fff8c2d    0x1c  Code  Wk  port.o [1]
-vPortStartFirstTask     0x1fff8a51          Code  Gb  portasm.o [1]
+                        0x1fffaf31    0x14  Code  Wk  port.o [1]
+vPortStartFirstTask     0x1fffb079          Code  Gb  portasm.o [1]
 vPortValidateInterruptPriority
-                        0x1fff8bc9    0x3e  Code  Gb  port.o [1]
-vPortYield              0x1fff8b55    0x12  Code  Gb  port.o [1]
-vQueueDelete            0x1fffb159    0x2a  Code  Gb  queue.o [1]
-vQueueUnregisterQueue   0x1fffb2df    0x24  Code  Gb  queue.o [1]
-vTaskDelay              0x1fff8391    0x4a  Code  Gb  tasks.o [1]
-vTaskMissedYield        0x1fff8835     0x8  Code  Gb  tasks.o [1]
-vTaskPlaceOnEventList   0x1fff86db    0x56  Code  Gb  tasks.o [1]
-vTaskSetTimeOutState    0x1fff87a7    0x1c  Code  Gb  tasks.o [1]
-vTaskStartScheduler     0x1fff83db    0x4e  Code  Gb  tasks.o [1]
-vTaskSuspendAll         0x1fff8429    0x10  Code  Gb  tasks.o [1]
-vTaskSwitchContext      0x1fff8655    0x86  Code  Gb  tasks.o [1]
-virtqueue_add_buffer    0x1fffa28d    0x7e  Code  Gb  virtqueue.o [1]
+                        0x1fffaee5    0x36  Code  Gb  port.o [1]
+vPortYield              0x1fffae6f    0x12  Code  Gb  port.o [1]
+vQueueDelete            0x1fffa3e9    0x66  Code  Gb  queue.o [1]
+vTaskDelay              0x1fffa6d7    0x6c  Code  Gb  tasks.o [1]
+vTaskMissedYield        0x1fffac17     0xa  Code  Gb  tasks.o [1]
+vTaskPlaceOnEventList   0x1fffaac1    0x74  Code  Gb  tasks.o [1]
+vTaskSetTimeOutState    0x1fffab97    0x1e  Code  Gb  tasks.o [1]
+vTaskStartScheduler     0x1fffa743   0x15c  Code  Gb  tasks.o [1]
+vTaskSuspendAll         0x1fffa89f    0x10  Code  Gb  tasks.o [1]
+vTaskSwitchContext      0x1fffaa55    0x6c  Code  Gb  tasks.o [1]
+virtqueue_add_buffer    0x1fff92ad    0x8e  Code  Gb  virtqueue.o [1]
 virtqueue_add_consumed_buffer
-                        0x1fffa403    0x4e  Code  Gb  virtqueue.o [1]
-virtqueue_create        0x1fffa1e7    0xa6  Code  Gb  virtqueue.o [1]
-virtqueue_disable_cb    0x1fffa45d    0x2c  Code  Gb  virtqueue.o [1]
-virtqueue_free          0x1fffa383    0x1e  Code  Gb  virtqueue.o [1]
+                        0x1fff9425    0x34  Code  Gb  virtqueue.o [1]
+virtqueue_create        0x1fff918d   0x120  Code  Gb  virtqueue.o [1]
+virtqueue_free          0x1fff93c5    0x12  Code  Gb  virtqueue.o [1]
 virtqueue_get_available_buffer
-                        0x1fffa3a1    0x62  Code  Gb  virtqueue.o [1]
-virtqueue_get_buffer    0x1fffa30b    0x78  Code  Gb  virtqueue.o [1]
-virtqueue_kick          0x1fffa489    0x20  Code  Gb  virtqueue.o [1]
-virtqueue_notification  0x1fffa5f3    0x12  Code  Gb  virtqueue.o [1]
-vq_ring_add_buffer      0x1fffa4a9    0x78  Code  Lc  virtqueue.o [1]
-vq_ring_free_chain      0x1fffa521    0x52  Code  Lc  virtqueue.o [1]
-vq_ring_init            0x1fffa573    0x4a  Code  Lc  virtqueue.o [1]
-vq_ring_must_notify_host
-                        0x1fffa605    0x54  Code  Lc  virtqueue.o [1]
-vq_ring_notify_host     0x1fffa659    0x12  Code  Lc  virtqueue.o [1]
-vq_ring_update_avail    0x1fffa5bd    0x36  Code  Lc  virtqueue.o [1]
-vring_init              0x1fffa1ad    0x22  Code  Lc  virtqueue.o [1]
-vring_need_event        0x1fffa1cf    0x18  Code  Lc  virtqueue.o [1]
-vring_size              0x1fff98b1    0x1c  Code  Lc  remote_device.o [1]
-vring_size              0x1fffa191    0x1c  Code  Lc  virtqueue.o [1]
-xDelayedTaskList1       0x200052b0    0x14  Data  Lc  tasks.o [1]
-xDelayedTaskList2       0x200052c4    0x14  Data  Lc  tasks.o [1]
-xEnd                    0x20005184     0x8  Data  Lc  heap_2.o [1]
-xFreeBytesRemaining     0x20000000     0x4  Data  Lc  heap_2.o [1]
-xNextTaskUnblockTime    0x20000168     0x4  Data  Lc  tasks.o [1]
-xNumOfOverflows         0x20005320     0x4  Data  Lc  tasks.o [1]
-xPendingReadyList       0x200052e0    0x14  Data  Lc  tasks.o [1]
-xPortStartScheduler     0x1fff8abd    0x98  Code  Gb  port.o [1]
+                        0x1fff93d7    0x4e  Code  Gb  virtqueue.o [1]
+virtqueue_get_buffer    0x1fff933b    0x8a  Code  Gb  virtqueue.o [1]
+virtqueue_kick          0x1fff9461    0x46  Code  Gb  virtqueue.o [1]
+virtqueue_notification  0x1fff94d3     0xa  Code  Gb  virtqueue.o [1]
+vq_ring_update_avail    0x1fff94a7    0x2c  Code  Lc  virtqueue.o [1]
+xDelayedTaskList1       0x20005244    0x14  Data  Lc  tasks.o [1]
+xDelayedTaskList2       0x20005258    0x14  Data  Lc  tasks.o [1]
+xEnd                    0x20000008     0x8  Data  Lc  heap_2.o [1]
+xFreeBytesRemaining     0x20000010     0x4  Data  Lc  heap_2.o [1]
+xNextTaskUnblockTime    0x2000523c     0x4  Data  Lc  tasks.o [1]
+xNumOfOverflows         0x20005234     0x4  Data  Lc  tasks.o [1]
+xPendingReadyList       0x20005184    0x14  Data  Lc  tasks.o [1]
+xPortStartScheduler     0x1fffadad    0xc2  Code  Gb  port.o [1]
 xQueueCreateCountingSemaphore
-                        0x1fffad4d    0x3a  Code  Gb  queue.o [1]
-xQueueGenericCreate     0x1fffacf1    0x5c  Code  Gb  queue.o [1]
-xQueueGenericReceive    0x1fffaf7d   0x13a  Code  Gb  queue.o [1]
-xQueueGenericReset      0x1fffac79    0x78  Code  Gb  queue.o [1]
-xQueueGenericSend       0x1fffad87   0x134  Code  Gb  queue.o [1]
+                        0x1fff9ee9    0x88  Code  Gb  queue.o [1]
+xQueueGenericCreate     0x1fff9e71    0x78  Code  Gb  queue.o [1]
+xQueueGenericReceive    0x1fffa1b9   0x1ba  Code  Gb  queue.o [1]
+xQueueGenericSend       0x1fff9f71   0x1ba  Code  Gb  queue.o [1]
 xQueueGenericSendFromISR
-                        0x1fffaebb    0xc2  Code  Gb  queue.o [1]
-xQueueReceiveFromISR    0x1fffb0b7    0xa2  Code  Gb  queue.o [1]
-xQueueRegistry          0x200051a4    0x40  Data  Gb  queue.o [1]
-xSchedulerRunning       0x20005314     0x4  Data  Lc  tasks.o [1]
-xStart                  0x2000517c     0x8  Data  Lc  heap_2.o [1]
-xSuspendedTaskList      0x200052f4    0x14  Data  Lc  tasks.o [1]
-xTaskCheckForTimeOut    0x1fff87c3    0x72  Code  Gb  tasks.o [1]
-xTaskGenericCreate      0x1fff8241   0x150  Code  Gb  tasks.o [1]
-xTaskIncrementTick      0x1fff8521   0x134  Code  Gb  tasks.o [1]
+                        0x1fffa12b    0x8c  Code  Gb  queue.o [1]
+xQueueReceiveFromISR    0x1fffa373    0x76  Code  Gb  queue.o [1]
+xQueueRegistry          0x2000528c    0x40  Data  Gb  queue.o [1]
+xSchedulerRunning       0x20005228     0x4  Data  Lc  tasks.o [1]
+xStart                  0x20000000     0x8  Data  Lc  heap_2.o [1]
+xSuspendedTaskList      0x20005208    0x14  Data  Lc  tasks.o [1]
+xTaskCheckForTimeOut    0x1fffabb5    0x62  Code  Gb  tasks.o [1]
+xTaskGenericCreate      0x1fffa551   0x186  Code  Gb  tasks.o [1]
+xTaskIncrementTick      0x1fffa965    0xec  Code  Gb  tasks.o [1]
 xTaskRemoveFromEventList
-                        0x1fff8731    0x76  Code  Gb  tasks.o [1]
-xTaskResumeAll          0x1fff8439    0xe8  Code  Gb  tasks.o [1]
-xTickCount              0x2000530c     0x4  Data  Lc  tasks.o [1]
-xYieldPending           0x2000531c     0x4  Data  Lc  tasks.o [1]
+                        0x1fffab35    0x62  Code  Gb  tasks.o [1]
+xTaskResumeAll          0x1fffa8b1    0xb4  Code  Gb  tasks.o [1]
+xTickCount              0x20005220     0x4  Data  Lc  tasks.o [1]
+xYieldPending           0x20005230     0x4  Data  Lc  tasks.o [1]
 
 
 [1] = C:\nxp\M4_trunc\system\iar\debug\obj
@@ -715,9 +603,9 @@ xYieldPending           0x2000531c     0x4  Data  Lc  tasks.o [1]
 [5] = rt7M_tl.a
 [6] = shb_l.a
 
-  18 570 bytes of readonly  code memory
-   1 566 bytes of readonly  data memory
-  22 317 bytes of readwrite data memory
+  18 238 bytes of readonly  code memory
+     601 bytes of readonly  data memory
+  22 320 bytes of readwrite data memory
 
 Errors: none
 Warnings: none

@@ -38,6 +38,7 @@
 #include "board.h"
 #include "mu_imx.h"
 #include "debug_console_imx.h"
+#include "gpt.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 // Definitions
@@ -125,14 +126,72 @@ void HelloTask(void *pvParameters)
     }
 }
 
+void initInputCaptureGPT(void) 
+{
+    uint32_t freqA, freqB;
+    gpt_init_config_t config = {
+        .freeRun     = false,
+        .waitEnable  = true,
+        .stopEnable  = true,
+        .dozeEnable  = true,
+        .dbgEnable   = false,
+        .enableMode  = true
+    };
+
+    /* Initialize GPT module */
+    GPT_Init(BOARD_GPTB_BASEADDR, &config);
+
+    /* Set GPT clock source, when use OSC as clock source, we need to make sure the OSC freq
+     * after divided by OscPrescaler should be less than half of the peripheral clock set by
+     * CCM */
+    GPT_SetClockSource(BOARD_GPTB_BASEADDR, gptClockSourcePeriph);
+
+    /* Divide GPTB clock source frequency by 2 inside GPT module */
+    GPT_SetPrescaler(BOARD_GPTB_BASEADDR, 1);
+
+    /* Get GPT clock frequency */
+    freqB = get_gpt_clock_freq(BOARD_GPTB_BASEADDR); /* Get B peripheral clock freq */
+    freqB /= 2;
+
+    //Input Capture
+    GPT_SetInputOperationMode(BOARD_GPTB_BASEADDR, gptInputCaptureChannel1, gptInputOperationBothEdge);
+    GPT_SetInputOperationMode(BOARD_GPTB_BASEADDR, gptInputCaptureChannel2, gptInputOperationBothEdge);
+    
+    /* Set GPT interrupt priority to same value to avoid handler preemption */
+    NVIC_SetPriority(BOARD_GPTB_IRQ_NUM, 3);
+
+    /* Enable NVIC interrupt */
+    NVIC_EnableIRQ(BOARD_GPTB_IRQ_NUM);
+
+    /* Enable GPT Input Capture interrupt */
+    GPT_SetIntCmd(BOARD_GPTB_BASEADDR, gptStatusFlagInputCapture1, true);
+    GPT_SetIntCmd(BOARD_GPTB_BASEADDR, gptStatusFlagInputCapture2, true);
+
+    PRINTF("GPT timer will now start\n\r");
+    PRINTF("counter/freq ratio should be close to 0.0 or 1.0 ...\n\r");
+
+    /* GPT start */
+    GPT_Enable(BOARD_GPTB_BASEADDR);
+}
+    
+void BOARD_GPTB_HANDLER()
+{
+    GPT_ClearStatusFlag(BOARD_GPTB_BASEADDR, gptStatusFlagInputCapture1);
+
+    /* TBD Insert Your Processing */
+}
+    
 /*!
  * @brief Main function
  */
 int main(void)
 {
-    // Initialize demo application pins setting and clock setting.
+    /* Initialize demo application pins setting and clock setting. */
     hardware_init();
-
+    
+    /* Init Input Capture GPT */
+    initInputCaptureGPT();
+    
     /*
      * Prepare for the MU Interrupt
      *  MU must be initialized before rpmsg init is called

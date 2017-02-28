@@ -2,7 +2,7 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>2284765974</fileChecksum>
+  <fileChecksum>2014485986</fileChecksum>
   <configuration>
     <name>Debug</name>
     <outputs>
@@ -7869,7 +7869,7 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 508 1054 1114 483 1106 47 199 233 513 18 1036 1069 1034 1109 1100 500 482 45 470 1030 57 68 64 65 479 659 985</file>
+          <file> 482 508 1036 1034 500 483 1069 1109 1100 47 199 233 513 18 1054 1106 1114 45 470 1030 57 68 64 65 479 659 985</file>
         </tool>
         <tool>
           <name>ICCARM</name>
@@ -7950,11 +7950,11 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 1023 199 985 1016 1106 500 1025 185 1077 1030 1005 45 47 1090 1095 1081 1092 233 1091 1068 18 179 1010 1020 1075 1054 1114 659 1109 1093 1096 1012 1011 57 68 64 65 1015 1087 1021 1038 1078 1074 1036 1069 1034 1100 482 479 508 513 2 483 470</file>
+          <file> 500 1025 185 1077 47 1023 985 199 1016 1106 508 513 1030 1005 45 1090 1095 1081 1092 1109 1091 1068 18 179 1010 1020 1075 1054 1114 479 1093 1096 1012 1112 1011 57 68 64 65 1015 1087 1021 1038 1078 1074 1036 1069 1034 1100 482 659 233 2 483 470</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 2 1025 1023 985 199 47 57 64 65 68 45 18 1020 179 185 1015 1016 1095 1087 500 1090 1010 1011 1021 1005 1093 1077 1038 1078 1081 1092 1091 1074 1096 1075 1030 1036 1109 1100 482 483 233 659 479 470 1114 1054 513 508 1069 1106 1034 1012 1068</file>
+          <file> 2 1025 1023 985 199 47 57 64 65 68 45 18 1020 179 185 1015 1016 1095 1087 500 1090 1010 1011 1021 1005 1093 1077 1038 1078 1081 1092 1091 1074 1096 1075 1030 1036 1109 1100 482 483 233 659 479 470 1114 1054 513 508 1069 1106 1034 1012 1068 1112</file>
         </tool>
       </inputs>
     </file>
@@ -8381,10 +8381,6 @@
       </outputs>
       <inputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 513 45 47 199 482 500 1109 508 57 68 64 65 1100 1114 479 233 1105 483 470 659</file>
-        </tool>
-        <tool>
           <name>ICCARM</name>
           <file> 1105 500 199 47 57 64 65 68 45 513 508 1109 1100 482 483 233 659 479 470 1114</file>
         </tool>
@@ -8702,6 +8698,10 @@
       </outputs>
       <inputs>
         <tool>
+          <name>BICOMP</name>
+          <file> 47 199 1091 985 68 12 6 1093 1075 18 57 45 1077 500 1081 1092 586 64 65 1038 1078 1074</file>
+        </tool>
+        <tool>
           <name>ICCARM</name>
           <file> 586 199 47 57 64 65 68 45 18 6 12 1093 985 500 1077 1038 1078 1081 1092 1091 1074 1075</file>
         </tool>
@@ -8734,6 +8734,14 @@
         </tool>
       </inputs>
     </file>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\multicore\open-amp\virtio\virtio.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\multicore\open-amp\rpmsg\rpmsg_rtos.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
     <forcedrebuild>
       <name>$PROJ_DIR$\..\..\platform\CMSIS\DSP_Lib\Source\FilteringFunctions\arm_fir_sparse_init_q15.c</name>
       <tool>ICCARM</tool>
@@ -9816,6 +9824,178 @@
     </forcedrebuild>
     <forcedrebuild>
       <name>$PROJ_DIR$\..\..\platform\CMSIS\DSP_Lib\Source\BasicMathFunctions\arm_sub_q31.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\multicore\open-amp\common\shm\sh_mem.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\multicore\open-amp\common\hil\hil.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\multicore\open-amp\common\llist\llist.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\multicore\open-amp\rpmsg\rpmsg_ext.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\multicore\open-amp\porting\env\freertos\rpmsg_porting.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\multicore\open-amp\rpmsg\remote_device.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\multicore\open-amp\rpmsg\rpmsg.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\multicore\open-amp\porting\imx7d_m4\platform.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\multicore\open-amp\porting\config\config.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\multicore\open-amp\porting\imx7d_m4\platform_info.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\multicore\open-amp\rpmsg\rpmsg_core.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\hardware_init.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\pin_mux.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\clock_freq.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\main.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\board.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\platform\drivers\src\rdc_semaphore.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\platform\drivers\src\rdc.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\platform\drivers\src\sema4.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\platform\drivers\src\gpt.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\platform\drivers\src\ccm_analog_imx7d.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\platform\drivers\src\flexcan.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\platform\drivers\src\wdog_imx.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\platform\drivers\src\lmem.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\platform\drivers\src\ccm_imx7d.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\platform\drivers\src\uart_imx.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\platform\utilities\src\debug_console_imx.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\platform\utilities\src\print_scan.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\platform\drivers\src\ecspi.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\platform\drivers\src\gpio_imx.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\platform\drivers\src\adc_imx7d.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\platform\drivers\src\mu_imx.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\platform\drivers\src\i2c_imx.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\rtos\FreeRTOS\Source\portable\IAR\ARM_CM4F\port.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\multicore\open-amp\virtio\virtqueue.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\rtos\FreeRTOS\Source\portable\MemMang\heap_2.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\rtos\FreeRTOS\Source\croutine.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\rtos\FreeRTOS\Source\timers.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\rtos\FreeRTOS\Source\list.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\rtos\FreeRTOS\Source\event_groups.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\platform\devices\MCIMX7D\startup\system_MCIMX7D_M4.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\rtos\FreeRTOS\Source\queue.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\..\middleware\rtos\FreeRTOS\Source\tasks.c</name>
       <tool>ICCARM</tool>
     </forcedrebuild>
   </configuration>
